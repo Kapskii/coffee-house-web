@@ -1,0 +1,147 @@
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 20px 0 40px 0;
+    }
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    /* ----------------------------------------header-------------------------------------------- */
+
+    .header-wrapper {
+        padding: 0 40px;
+    }
+
+    .header-logo {
+        position: relative;
+        z-index: 6;
+    }
+
+    .headerBurger {
+        display: block;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        position: relative;
+        z-index: 6;
+        border: 1px solid #403F3D;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+
+    .headerBurger::before,
+    .headerBurger::after {
+        content: '';
+        background-color: #403F3D;
+        position: absolute;
+        width: 16px;
+        height: 1.5px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .headerBurger::before {
+        border-radius: 10px;
+        left: 30%;
+        top: 15px;
+    }
+
+    .headerBurger::after {
+        border-radius: 10px;
+        left: 30%;
+        bottom: 15px;
+    }
+
+    .headerBurger.active::before {
+        transform: rotate(45deg);
+        top: 20px;
+    }
+
+    .headerBurger.active::after {
+        transform: rotate(-45deg);
+        bottom: 20px;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: #E1D4C9;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 160px;
+        gap: 100px;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        overflow: auto;
+        z-index: 5;
+    }
+
+    .navigation.active {
+        right: 0;
+    }
+
+    .nav-wrapper {
+        flex-direction: column;
+
+    }
+
+    .nav-item {
+        font-size: 32px;
+        line-height: 125%;
+    }
+
+    .nav-item:hover::before {
+        display: none;
+    }
+
+    .nav-item-active::before {
+        display: none;
+    }
+
+    /* ----------------------------menu------------------------------------- */
+
+    .menu-wrapper {
+        margin: 0 40px 100px;
+    }
+
+    .menu-title {
+        width: 100%;
+    }
+
+    .menu-cards-wrapper {
+        justify-content: center;
+    }
+
+    .card-hidden {
+        display: none;
+    }
+
+
+    /* -----------------------------contact-------------------------------------------- */
+
+    .contact-wrapper {
+        flex-direction: column;
+        padding: 100px 60px;
+        margin: 0 40px;
+    }
+
+
+    /* -------------------------------modal---------------------------------------------- */
+
+    .modal-wrapper {
+        width: 90%;
+        height: max-content;
+}
+
+.modal-filters {
+    flex-wrap: wrap;
+}
+
+}
+
